@@ -1,0 +1,4 @@
+rhs setup
+
+Ruby 2.1.6 and net-ssh 2.9.2 solved my problem. 
+(Downgrade from Ruby 2.2.2 to 2.1.6 and net-ssh 2.9.3-beta1 to 2.9.2)

@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link href="../css/style.css" rel = "stylesheet"/>
+    <link href="../css/dashboard.css" rel="stylesheet">
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="admin.controller.js"></script>
+
+</head>
+
+    <div >
+
+<h1>Admin</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th>Username</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Email</th>
+        <th>Roles</th>
+    </tr>
+    <tr>
+      <td><input ng-model="controller.user.username"  class="form-control" placeholder="username" type="text"/></td>
+      <td><input ng-model="controller.user.password"  class="form-control" placeholder="password" type="password"/></td>
+      <td><input ng-model="controller.user.firstName" class="form-control" placeholder="first name" type="text"/></td>
+      <td><input ng-model="controller.user.lastName"  class="form-control" placeholder="last name" type="text"/></td>
+      <td><input ng-model="controller.user.email"     class="form-control" placeholder="email" type="email"/> </td>
+      <td><input ng-model="controller.user.roles"     class="form-control" placeholder="roles" type="text"/></td>
+      <td>
+          <button ng-click="controller.addUser(controller.user)" class="btn btn-primary">
+            <span class="glyphicon glyphicon-plus"></span>
+          </button>
+          <button ng-click="controller.updateUser(controller.user)" class="btn btn-success">
+            <span class="glyphicon glyphicon-ok"></span>
+          </button>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in controller.users">
+      <td>{{user.username}}</td>
+      <td>&nbsp;</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.email}} </td>
+      <td>{{user.roles}}</td>
+      <td>
+          <button ng-click="controller.removeUser(user._id)" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+          <button ng-click="controller.selectUser(user._id)" class="btn btn-info">
+            <span class="glyphicon glyphicon-pencil"></span>
+          </button>
+      </td>
+    </tr>
+</table>
+
+
+    </div>
+
+
+    </div>
+    </div>

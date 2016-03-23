@@ -1,0 +1,19 @@
+1. Home Page landing page of your project flashing page. what is why do users marketing tool. Model enticing.
+
+2. Login/Register allow users to register and login. Users should be able to sue the website 
+without login in. Only wehn accessing private or sensitive information should the 
+application force users to logn. Or if the Web application needs to knwo the identitiy 
+of the suers to execute an action. user third party login like google.
+
+3. Profile- allow users to edit personal information and navige to objects related to the suer, e.g. suers they are following,
+domain objects they are realted to, e.g. courses list... Profiles can have a public and a private version.
+address, email, anything they are related, bookmark songs and movies. Following some one and who is following me.
+
+
+4. Search / Search Results - Allow users to search for domain objects. Results are shown as summarized lsit. Clicking on a search result
+navigates to a details page for the domain object. combination of local database or api, search address. search bar. summary results of top 10.
+search books book mark instance, navigate the book. infomation of bookmark is in my local database. summarized search results.
+click to search lead to domain details.
+
+Domain Details - Shows a detailed view of a domanin object including any relations it has with other 
+objects, list of course details, instructors, imagines of the instructors. 
