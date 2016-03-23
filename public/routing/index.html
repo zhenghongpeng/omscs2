@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="MovieApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="css/dashboard.css" rel="stylesheet">-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="navigation.cotroller.js"></script>
+    <script src="search/search.controller.js"></script>
+    <script src="details/details.controller.js"></script>
+    <script src="services/movie.service.js"></script>
+    <script src="dashboard/dashboardController.js"></script>
+
+</head>
+
+<body>
+
+
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavController">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">OMSCS Udacity Courses</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-class="{'active': $location.url()=='/dashboard'}"><a href="#/dashboard">Dashboard</a></li>
+                <!--<li><a href="#">Settings</a></li>-->
+                <!--<li><a href="#">Profile</a></li>-->
+                <!--<li><a href="#">Help</a></li>-->
+                <!--<li ng-class="{'active': $location.url()=='/home'}"><a href="#/home">Home</a></li>-->
+
+
+                <li ng-hide="currentUser">
+                     <a href="#register">Register</a>
+                    <!--| <a href="#login">Login</a>-->
+                </li>
+                <li ng-hide="currentUser">
+                    <!--| <a href="#register">Register</a>-->
+                     <a href="#login">Login</a>
+                </li>
+                <li ng-show="currentUser">
+                   <a href="#profile">Profile</a>
+                  <!--| <a href="#" ng-click="controller.logout()">Logout</a>-->
+                </li>
+                <li ng-show="currentUser">
+                    <!--| <a href="#profile">Profile</a>-->
+                    <a href="#" ng-click="controller.logout()">Logout</a>
+                </li>
+        <li ng-show="currentUser.roles.indexOf('admin') > -1">
+           <a href="#admin">Admin</a>
+        </li>
+
+
+
+                <!--<li ng-class="{'active': $location.url()=='/search'}"><a href="#/search">Search</a></li>-->
+            </ul>
+            <!--<form class="navbar-form navbar-right">-->
+                <!--<input type="text" class="form-control" placeholder="Search...">-->
+            <!--</form>-->
+        </div>
+    </div>
+</nav>
+    <div ng-view></div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
