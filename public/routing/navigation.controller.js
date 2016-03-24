@@ -13,7 +13,7 @@
             UserService.logout(function()
             {
                 $rootScope.currentUser = null;
-                $location.url("/dashboard");
+                $location.url("/home");
             });
         }
     }
