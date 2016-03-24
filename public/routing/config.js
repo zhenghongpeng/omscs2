@@ -11,7 +11,7 @@
 
             .when("/dashboard",{
                 templateUrl: "dashboard/dashboard.view.html",
-                controller: "DashboardController"
+                controller: "DashboardController as controller"
             })
             .when("/register",
                 {

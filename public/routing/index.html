@@ -21,12 +21,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
     <script src="app.js"></script>
-    <script src="config.js"></script>
-    <script src="navigation.cotroller.js"></script>
+    <script src="dashboard/dashboardController.js"></script>
+    <script src="register/register.controller.js"></script>
+    <script src="login/login.controller.js"></script>
+    <script src="profile/profile.controller.js"></script>
+    <script src="admin/admin.controller.js"></script>
     <script src="search/search.controller.js"></script>
     <script src="details/details.controller.js"></script>
-    <script src="services/movie.service.js"></script>
-    <script src="dashboard/dashboardController.js"></script>
+
+
+    <script src="config.js"></script>
+    <script src="navigation.controller.js"></script>
+
+    <script src="services/user.service.js"></script>
 
 </head>
 
@@ -36,7 +43,7 @@
 
 
 
-<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavController">
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavController as controller">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
