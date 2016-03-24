@@ -8,7 +8,7 @@ var session       = require('express-session');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/wbdb');
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/routing'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({ secret: 'this is the secret' }));
